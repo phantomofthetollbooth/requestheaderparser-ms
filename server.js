@@ -13,11 +13,11 @@ res.sendFile(path.join(__dirname, '/public', 'index.html'));
 
 app.get("/api/whoami", function(req, res) {
 //res.sendFile(path.join(__dirname, '/public', 'index.html'));
-var language = req.headers.accept-language.substring(0,accept-language.indexOf(','));
-  //var lang = langList.substring(0, langList.indexOf(','));
+var languageString = req.headers.accept-language;
+  var lang = languageString.substring(0, languageString.indexOf(','));
   var response={
-	  language: language
-  }
+	  language: lang
+  };
   res.json(response);
 });
 
