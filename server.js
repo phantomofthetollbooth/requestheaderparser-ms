@@ -14,7 +14,11 @@ res.sendFile(path.join(__dirname, '/public', 'index.html'));
 app.get("/api/whoami", function(req, res) {
 var ip = requestIp.getClientIp(req); 
 var languageString = req.headers["accept-language"];
-  var lang = languageString.substring(0, languageString.indexOf(','||languageString.length-1));
+if(languageString.indexof(',')!=-1){
+  var lang = languageString.substring(0, languageString.indexOf(','));
+}else{
+	var lang = languageString;
+}
    var userAgent = req.headers["user-agent"]
   var software = userAgent.substring(userAgent.indexOf('(')+1, userAgent.indexOf(')'))
   var response={
