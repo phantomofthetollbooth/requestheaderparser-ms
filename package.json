@@ -4,11 +4,12 @@
   "description": "request header parser",
   "main": "server.js",
   "scripts": {
-  "start": "node server.js"
+    "start": "node server.js"
   },
   "author": "phantomofthetollbooth",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "request-ip": "^1.2.2"
   }
 }
