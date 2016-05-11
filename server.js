@@ -17,7 +17,7 @@ var languageString = req.headers.accept-language;
   var lang = languageString.substring(0, languageString.indexOf(','));
   var response={
 	  language: lang
-  };
+  }
   res.json(response);
 });
 
