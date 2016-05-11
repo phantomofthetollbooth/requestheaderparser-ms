@@ -16,7 +16,7 @@ app.get("/api/whoami", function(req, res) {
 var languageString = req.headers.accept-language;
   var lang = languageString.substring(0, languageString.indexOf(','));
   var response={
-	  language: lang,
+	  //language: lang,
 	  car:"dog"
   }
   res.json(response);
